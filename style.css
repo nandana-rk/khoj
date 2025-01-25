@@ -29,11 +29,19 @@
     margin: auto;
   }
 
+  .dashboard-buttons{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
     .logo-container {
-        width: 100px;
-        height: 100px;
+        width: 400px;
+        height: 400px;
         margin: auto;
         background-color: grey;
+    }
+    .logo-container img{
+      width: 100%;
     }
   /* Home Page */
   #home {

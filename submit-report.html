@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khoj - Submit Report</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Missing Report</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS file -->
+    <script src="script.js"></script> <!-- Link to your JavaScript file for form submission or validation -->
 </head>
-<body id="submit-report-page">
-  <div class="report-container">
-    <h1>Submit Missing Report</h1>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="number" placeholder="Age" style="padding: 12px;" required>
-      <textarea placeholder="Description" required></textarea>
-      <input type="text" placeholder="Last Seen Location" required>
-      <button type="submit">Submit Report</button>
-    </form>
-  </div>
-  <script src="script.js"></script>
+<body>
+    <div class="container">
+        <h1>Submit Missing Report</h1>
+        <form id="missingReportForm" method="POST" enctype="multipart/form-data">
+            <label for="name">Name of Missing Person:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter Age" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter Description" required></textarea>
+
+            <label for="lastSeen">Last Seen Location:</label>
+            <input type="text" id="lastSeen" name="lastSeen" placeholder="Enter Last Seen Location" required>
+
+            <label for="photo">Upload Photo of Missing Person:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <label for="policeReport">Police Report (Optional):</label>
+            <input type="text" id="policeReport" name="policeReport" placeholder="Enter Police Case Number">
+
+            <button type="submit">Submit Report</button>
+        </form>
+    </div>
 </body>
 </html>
